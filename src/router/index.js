@@ -1,41 +1,41 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/Home.vue";
+import Home from "@/views/Home.vue";
 
 const routes = [
   {
     path: "/",
     name: "home",
-    component: HomeView,
+    component: Home,
   },
   {
     path: "/signup",
     name: "SignUp",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/SignUp.vue"),
+      import(/* webpackChunkName: "about" */ "@/views/auth/SignUp.vue"),
   },
   {
     path: "/login",
     name: "LogIn",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/LogIn.vue"),
+      import(/* webpackChunkName: "about" */ "@/views/auth/LogIn.vue"),
   },
   {
     path: "/playlist/create",
     name: "CreatePlaylist",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/CreatePlaylist.vue"),
+      import(/* webpackChunkName: "about" */ "@/views/CreatePlaylist.vue"),
   },
   {
     path: "/playlist/:id",
     name: "DetailsPlaylist",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/DetailsPlaylist.vue"),
+      import(/* webpackChunkName: "about" */ "@/views/DetailsPlaylist.vue"),
   },
   {
     path: "/playlist/user",
     name: "UserPlaylist",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/UserPlaylist.vue"),
+      import(/* webpackChunkName: "about" */ "@/views/UserPlaylist.vue"),
   },
 ];
 
